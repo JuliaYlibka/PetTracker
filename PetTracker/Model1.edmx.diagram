@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="90433dd5b1bc4a4fa7d53d4f617dd734" Name="Diagram1">
+        <EntityTypeShape EntityType="PetTrackerBDModel.Animal" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetTrackerBDModel.Gender" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetTrackerBDModel.Medicine" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetTrackerBDModel.Role" Width="1.5" PointX="5.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetTrackerBDModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetTrackerBDModel.Task" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetTrackerBDModel.Type" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PetTrackerBDModel.User" Width="1.5" PointX="8" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="PetTrackerBDModel.FK_Animal_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="PetTrackerBDModel.FK_Task_Animal" ManuallyRouted="false" />
+        <AssociationConnector Association="PetTrackerBDModel.FK_Medicine_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="PetTrackerBDModel.FK_Task_Medicine" ManuallyRouted="false" />
+        <AssociationConnector Association="PetTrackerBDModel.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
