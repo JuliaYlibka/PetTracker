@@ -25,11 +25,13 @@ namespace PetTracker.Pages
         {
             InitializeComponent();
             GenderCB.ItemsSource = PetTrackerBDEntities.GetContext().Gender.ToList();
-            GenderCB.SelectedIndex = 0;
+
             if(selectedAnimal!=null)
             {
                 currentAnimal = selectedAnimal;
-                GenderCB.SelectedIndex = currentAnimal.Gender1.ID;
+                GenderCB.SelectedItem = currentAnimal.Gender1 ;
+                DateBirth.SelectedDate = currentAnimal.DateBirth ;
+                
             }
             DataContext = currentAnimal;
 
@@ -50,10 +52,10 @@ namespace PetTracker.Pages
 
             if (string.IsNullOrWhiteSpace(currentAnimal.DateBirth.ToString()))
                 errors.AppendLine("Укажите дату рождения животного!");
-            if ((currentAnimal.Gender == null) && (GenderCB.Text == ""))
+            if ((GenderCB.SelectedItem == null))
                 errors.AppendLine("Выберите пол животного!");
             else
-                currentAnimal.Gender = (int)GenderCB.SelectedIndex;
+                currentAnimal.Gender =(int) GenderCB.SelectedValue;
             
             if (errors.Length > 0)
             {

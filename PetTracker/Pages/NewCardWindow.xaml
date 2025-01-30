@@ -15,7 +15,7 @@
 
 
             <TextBlock Text="Пол:" VerticalAlignment="Center" Margin="10"/>
-            <ComboBox Name="GenderCB" Text="{Binding Gender1}" Width="250" DisplayMemberPath="Title"  />
+            <ComboBox Name="GenderCB" SelectedValuePath="ID" Width="250" DisplayMemberPath="Title"  />
 
             <TextBlock Text="Фотография:" VerticalAlignment="Center" Margin="10"/>
             <TextBox Name="ImageTB" Text="{Binding Image}" Width="250"/>
